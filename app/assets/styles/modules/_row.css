@@ -1,0 +1,59 @@
+.row {
+
+    
+
+    &--gutters {
+        margin-right: -65px;
+    }
+    /*use greater than symbal to select all direct children*/
+    &--gutters > div {
+        /*normally, after adding this padding, the content on the right will break*/
+        /*into the second line, the reason being 33%+66%+65px is greater than 100%*/
+        padding-right: 65px;
+        /*we can fix this by applying box-sizing: border box*/
+        box-sizing: border-box;
+    }
+
+    @mixin clearfix;
+    /*this css will add the content with nothing in it*/
+    /*after everything in the main row div*/
+    /*&::after {
+        content: "";
+        clear: both;
+        display: table;
+    }*/
+
+    &__b-margin-until-medium {
+      margin-bottom: 1rem;
+    }
+
+    @mixin atMedium {
+
+      &__b-margin-until-medium {
+        margin-bottom: 0;
+      }
+
+
+      &__medium-4 {
+          float: left;
+          width: 33.33%;
+      } 
+      
+      &__medium-4--larger {
+         width: 37%;
+      }
+
+      &__medium-8 {
+          float: left;
+          width: 66.66%;
+      }
+
+      &__medium-8--smaller {
+        width: 63%;
+      } 
+    }
+    
+
+    
+    
+}

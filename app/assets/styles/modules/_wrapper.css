@@ -1,0 +1,30 @@
+.wrapper {
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    /*if the screen is way to large, make sure lines are human read friendly*/
+    max-width: 1236px;
+    /*also, make sure the text stay in middle*/
+    margin-left: auto;
+    margin-right: auto;
+
+    &--medium{
+        max-width: 976px;
+    }
+
+    &--b-margin {
+
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+            margin-bottom: 3.875rem;
+        }
+    }
+    
+    /*this means any wrapper wrapped inside another wrapper should*/
+    /*no longer possess the ability to have padding*/
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

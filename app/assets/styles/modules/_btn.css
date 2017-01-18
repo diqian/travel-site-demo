@@ -1,0 +1,22 @@
+.btn {
+    background-color: $mainBlue;
+    color: #FFF; 
+    /*remove the underline of the button*/
+    text-decoration: none;  
+    padding: .75rem 1.2rem;
+    display: inline-block;
+
+    &--orange {
+        background-color: $mainOrange;
+    }
+
+    &--large {
+        /*if no font size, default to 1 rem*/
+        padding: 1.1rem 1.9rem;
+        @mixin atSmall {
+            font-size: 1.25rem;            
+        }
+
+    }
+}
+
