@@ -5,6 +5,10 @@
     &--gutters {
         margin-right: -65px;
     }
+
+    &--gutters-large {
+      margin-right: -100px;
+    }
     /*use greater than symbal to select all direct children*/
     &--gutters > div {
         /*normally, after adding this padding, the content on the right will break*/
@@ -12,6 +16,10 @@
         padding-right: 65px;
         /*we can fix this by applying box-sizing: border box*/
         box-sizing: border-box;
+    }
+
+    &--gutters-large > div {
+        padding-right: 100px;
     }
 
     @mixin clearfix;
@@ -43,6 +51,11 @@
          width: 37%;
       }
 
+      &__medium-6 {
+          float: left;
+          width: 50%;
+      } 
+
       &__medium-8 {
           float: left;
           width: 66.66%;
@@ -51,6 +64,8 @@
       &__medium-8--smaller {
         width: 63%;
       } 
+
+
     }
     
 
