@@ -16,3 +16,4 @@
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp*/
 /* Instead, edit gulp/templates/sprite*/
 @import "modules/_sprite"; 
+@import "modules/_site-footer";
