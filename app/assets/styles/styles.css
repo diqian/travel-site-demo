@@ -12,3 +12,7 @@
 @import "modules/_section-title";
 @import "modules/_feature-item";
 @import "modules/_testimonial";
+/*notice, this sprite file is genereated through gulp*/
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp*/
+/* Instead, edit gulp/templates/sprite*/
+@import "modules/_sprite"; 

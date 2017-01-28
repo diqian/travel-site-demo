@@ -1,0 +1,20 @@
+/* Test Comment */
+
+/*the gulp svg system make use of mustache template system*/
+
+{{#shapes}}
+    {{#first}}
+        /*any code between these line, only run once*/
+        .icon {
+            background-image: url('/assets/images/sprites/{{{sprite}}}');
+        }
+    {{/first}}
+    /*any code here will be looped through for each icon*/
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        /*reason that we use sprite is becuase the svg name is newly*/
+        /*generated each time, so sprite will find it for us*/  
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}
