@@ -5,6 +5,7 @@ var cssvars = require('postcss-simple-vars');
 var nested  = require('postcss-nested');
 var cssimport = require('postcss-import');
 var mixins = require('postcss-mixins');
+var hexrgba = require('postcss-hexrgba');
 
 
 
@@ -22,7 +23,7 @@ gulp.task('styles', function(){
     //within pipe, we can do whatever we want
     return gulp.src('./app/assets/styles/styles.css')
     // postcss() is expecting an array as element
-    .pipe(postcss([cssimport, mixins, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssimport, mixins, cssvars, nested, hexrgba, autoprefixer]))
     //before it pipe to our destination, we want to use on function
     // frist param: name of the event we are interested in
     // second param: what we want to do

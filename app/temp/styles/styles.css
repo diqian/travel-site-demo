@@ -488,6 +488,7 @@ a {
 }
 
 .large-hero__text-content {
+  padding-top: 88px;
   position: absolute;
   left: 0;/*centering horizontally*/
   width: 100%;
@@ -495,6 +496,13 @@ a {
   top: 50%;/*this allow position element vertically relative to itself*/
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (min-width: 800px) {
+
+  .large-hero__text-content {
+    padding-top: 60px;
+  }
 }
 
 .large-hero__title {
@@ -1162,13 +1170,86 @@ a {
         background-position: 36.69752421959096% 45.792307692307695%;
     }
 
+.site-header {
+    padding: 10px 0;
+    position: absolute;
+    z-index: 2;
+    /*this is not valid css, but postcss can do it for us*/
+    /*it will tranlslate mainBlue into color code*/
+    /* npm install postcss-hexrgba --save-dev */
+    
+    width: 100%;
+
+}
+
+@media (min-width: 800px) {
+
+  .site-header {
+    background-color: rgba(47,85,114, .3);
+  }
+}
+
+.site-header__btn-container {
+  float: right;
+}
+
+.site-header__logo {/*we have to take it out of the natural flow of the page*//*because the height is currently demtermined by this logo*/
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(.8);
+          transform: translateX(-50%) scale(.8);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  position: absolute;
+  background-color: #2f5572;
+  padding: 25px 36px;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__logo {
+    left: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.site-header__logo__graphic {/*we included text because it will be better for search engine to search us*//*but now, we use text ident to make it disappear*/
+  text-indent: -99999px;
+}
+
+.site-header__menu-content {
+  display: none;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-content {
+    display: block;
+  }
+}
+
+.site-header__menu-icon {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-icon {
+    display: none;
+  }
+}
+
 .site-footer {
     background-color: #2f5572;
     color: #FFF;
     padding: .5rem 0;
     text-align: center;
-
-    
 }
 
 .site-footer__text {
@@ -1184,4 +1265,35 @@ a {
     margin-bottom: 0;
     margin-right: 1.4rem;
   }
+}
+
+/*we want to float link into a line */
+
+.primary-nav--pull-right {
+  float: right;
+}
+
+.primary-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.primary-nav li {
+  list-style: none;
+  float: left;
+  padding-right: 20px;
+}
+
+.primary-nav a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  padding: 12px 0;
 }

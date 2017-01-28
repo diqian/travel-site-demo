@@ -7,18 +7,22 @@
     }
 
     &__text-content {
-    position: absolute;
-    
-    left: 0;
-    /*centering horizontally*/
-    width: 100%;
-    text-align: center;
-    /*centering vertically*/
-    /*first: put the top under half*/
-    /*second: pull it up by half of it's own height*/
-    top: 50%; 
-    /*this allow position element vertically relative to itself*/
-    transform: translateY(-50%);
+        padding-top: 88px;
+        position: absolute;
+        
+        left: 0;
+        /*centering horizontally*/
+        width: 100%;
+        text-align: center;
+        /*centering vertically*/
+        /*first: put the top under half*/
+        /*second: pull it up by half of it's own height*/
+        top: 50%; 
+        /*this allow position element vertically relative to itself*/
+        transform: translateY(-50%);
+        @mixin atMedium {
+            padding-top: 60px;
+        }
     }  
 
     &__title {
